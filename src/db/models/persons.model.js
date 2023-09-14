@@ -1,4 +1,4 @@
-const { Model, DataTypes, Sequelize } = require('sequelize');
+const {Model, DataTypes, Sequelize} = require('sequelize');
 
 const PERSON_TABLE = 'persons';
 
@@ -11,7 +11,7 @@ class Person extends Model {
             timestamps: true
         }
     }
-} 
+}
 
 const PersonSchema = {
     id: {
@@ -23,18 +23,18 @@ const PersonSchema = {
     name: {
         allowNull: false,
         type: DataTypes.STRING,
-        field:'name'
+        field: 'name'
     },
-    address:{ 
-        allowNull:false,
+    address: {
+        allowNull: false,
         type: DataTypes.STRING,
         field: 'address'
     },
-    phone:{
+    phone: {
         allowNull: true,
         type: DataTypes.INTEGER,
         field: 'phone'
-    } 
+    }
 }
-  
-module.exports = { Person, PersonSchema };
+
+module.exports = {Person, PersonSchema};
